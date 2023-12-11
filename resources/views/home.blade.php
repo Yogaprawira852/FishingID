@@ -4,28 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@1,200&family=Rubik&display=swap" rel="stylesheet">
 </head>
-<body >
+<body class="font-[Poppins] ">
 
-  <header class="  bg-[#D9D9D9]">
-      <nav>
-        <div">
-           <img class="w-28 mx-28" src="img/logo.png" alt="">
+  <header class=" px-20">
+      <nav  class="  bg-slate-300 flex justify-between items-center w-[92%] mx-auto px-7 rounded  ">
+        <div>
+           <img class="w-28" src="img/logo.png" alt="">
          </div>
 
-        <div class="">
-            <ul class="flex items-center gap-[4vw]">
-              <li><a href=""> Menu 1 </a></li>
-              <li><a href=""> Menu 2 </a></li>
-              <li><a href=""> Menu 3 </a></li>
-              <li><a href=""> Menu 4 </a></li>
-            </ul>
+        <div class="flex w-96 rounded bg-white">
+            <input type="search" name="search" id="search" placeholder="search"
+            class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none">
+            <button class="m-2 rounded bg-orange-400 px-4 py-2 text-white"> search</button>
         </div>
         <div>
-          <button class=" px-5 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-full">Sign In</button>
+          <a href="#" class="text-white px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-full">Sign In</a>
         </div>
       </nav>
   </header>
+
+  
 
 </body>
 </html>
