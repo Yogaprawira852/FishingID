@@ -11,7 +11,7 @@
   <header class=" px-20">
       <nav  class="  bg-slate-300 flex justify-between items-center w-[92%] mx-auto px-7 rounded  ">
         <div>
-           <img class="w-28" src="img/logo.png" alt="">
+           <a href="/"><img class="w-28" src="img/logo.png" alt=""></a>
          </div>
 
         <div class="flex w-96 rounded bg-white">
@@ -24,8 +24,21 @@
         </div>
       </nav>
   </header>
-
-  
+      <div>
+        <div class=" mx-[20%] my-10 border-4 border-orange-400 rounded shadow-md ">
+        <p class="text-center py-5 text-base font-semibold bg-slate-200 mx-20 rounded my-5">Kategori</p>    
+        <div class="grid grid-cols-6   justify-between place-items-center mx-5 pb-5">
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+              <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+       
+            </div>
+        </div>
+      </div>
 
 </body>
 </html>
