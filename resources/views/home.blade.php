@@ -12,67 +12,73 @@
 </head>
 <body class="font-[Poppins] ">
 
-<!-- navbar -->
-  <header class=" px-20">
-      <nav  class="  bg-slate-300 flex justify-between items-center w-[92%] mx-auto px-7 rounded  ">
-        <div>
-           <a href="/"><img class="w-28" src="img/logo.png" alt=""></a>
-         </div>
+@include('partials.navbar');
 
-        <div class="flex w-96 rounded bg-white">
-            <input type="search" name="search" id="search" placeholder="search"
-            class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none">
-            <button class="m-2 rounded bg-orange-400 px-4 py-2 text-white"> search</button>
-        </div>
+    <!-- hero section -->
+    <section class="px-3 py-5 bg-neutral-100 lg:py-10">
+      <div class="grid lg:grid-cols-2 item bg-center justify-items-center gap-5 font-sans mx-10">
+          <div class="flex flex-col justify-center items-center">
+            <p class="w-full text-center text-4xl font-extrabold md:text-7xl text-orange-400">Best Choice For Fishing Gear</p>
+            <p class="w-full text-center text-2xl font-bold md:text-5xl text-slate-600">100% original</p>
+            <button class="text-lg md:text-2xl bg-slate-600 text-white hover:bg-slate-500 py-3 px-5 my-5 rounded-md"> Check Katalog </button>
+          </div>
         <div>
-          <a href="#" class="text-white px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-full">Sign In</a>
+          <img class="h-80 w-80 object-cover py-2 px-5 lg:w-[500px] lg:h-[500px] border-r-4 border-slate-400" src="img/hero.png" alt="">
         </div>
-      </nav>
-  </header>
+      </div>
+    </section>
 
-    <!-- kaetegori -->
+
+    </div>  <!-- kaetegori -->
       <div>
         <div class=" mx-[20%] my-10 border-4 border-orange-400 rounded-lg shadow-md ">
             <p class="text-center py-5 text-base font-semibold bg-slate-200 mx-20 rounded-lg my-5">Kategori</p>    
                <div class="grid grid-cols-6   justify-between place-items-center mx-5 pb-5">
-                <!-- nama kategori dan logo kategori disini -->
+                  <!-- nama kategori dan logo kategori disini -->
+                  <!-- looping disini -->
                    <a href="" class="pb-3"> <img class="w-20" src="img/logo.png" alt="icon kategori"><p>Kategori 1</p></a>
+                   <!-- sampai sini -->
                </div>
            </div>
       </div>
 
     <!-- Item card -->
-<div class="grid-cols-5">
-    <div class="flex 	items-center justify-center gap-10">
-          <!-- item 1 -->
-          <!-- looping dari line ini "hapus aja komenya nanti" -->
-        <div class="w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden">
-          <!-- gambar disini -->
-                <img class="w-full h-full object-cover" src="img/logo.png" alt="produk">
-           <div class="p-5 flex flex-col gap-3">
-               <!-- judul disini -->
-                 <h2 class="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap"> Judul item</h2>
+
+<div>    
+<div class="grid grid-cols-4 justify-items-center gap-8 mx-10">
+  <!-- looping dari sini -->
+<div class=" ">
+      <div class="card">
+                                                     <!-- Gambar -->
+          <img class="w-full h-full object-cover" src="img/logo.png" alt="produk">
+            <div class="p-5 flex flex-col gap-3">
               <div>
-                <!-- harga disini -->
-                <span class="text-xl font-bold">
-                    Rp.400.000
-                </span>
-                
-                   <div class="mt-5 flex gap-5">
-                      <button class="bg-orange-400 hover:bg-orange-300 px-6 py-2 rounded-md text-white font-medium tracking-wider transition">
-                         Beli Sekarang
-                      </button>
-                        <button class="flex-grow flex justify-center items-center bg-slate-300 hover:bg-slate-200 transition rounded-md">
-                           <i class="fa-solid fa-cart-plus fa-lg opacity-60 " style="color: #000000;"></i>
-                       </button>
-            </div>
-          </div>   
-        </div>
-    </div>  
-  </div>
+                <span class="px-3 py-1 rounded-full text-xs bg-gray-100">Kategori</span>
+              </div>
+                                                                                                  <!-- nama produk -->
+               <h2 class="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap"> Nama Produk </h2>
+
+              <div>
+                                               <!-- harga -->
+                <span class="text-xl font-bold">Rp.400.000</span>
+              </div>
+
+              <div class="mt-5 flex gap-2">
+            <button class="px-3 py-3 rounded bg-orange-400 hover:bg-orange-300 text-white font-medium tracking-wider transition"> Beli Sekarang </button>
+            <button class="flex-grow flex justify-center items-center bg-gray-400 hover:bg-gray-300 transition rounded-md" > <i class="opacity-70 fa-solid fa-cart-plus fa-lg" style="color: #000000;"></i> </button>
+          </div>
+          </div>         
+      </div>   
+</div>
+   <!-- sampai sini -->
+  
+
 </div>   
+</div>
 
 
-    
+
+
+@include('partials.Footer');
 </body>
 </html>
