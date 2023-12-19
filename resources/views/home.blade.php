@@ -38,7 +38,7 @@
   <!-- looping dari sini -->
 <div class=" ">
       <!-- link produk  -->
-      <a href=" /"><div class="card">
+      <a href=" /product"><div class="card">
                                                        <!-- Gambar -->
           <img class="w-full h-full object-cover" src="img/logo.png" alt="produk">
             <div class="p-5 flex flex-col gap-3">
