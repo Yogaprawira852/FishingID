@@ -1,9 +1,4 @@
 
-
-
-
-
-
 <footer  class=" font-semibold text-gray-800 bg-slate-300 flex justify-between items-center rounded px-10">
   <div class="">
     <P>Contact Us</P>
