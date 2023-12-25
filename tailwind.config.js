@@ -6,7 +6,16 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        poppins: "'Poppins', sans-serif",
+        roboto: "'Roboto', sans-serif",
+        lato: "'Lato', sans-serif",
+        rubik:"'Rubik', sans-serif",
+        outfit:"'Outfit', sans-serif"
+      }
+    },
   },
   plugins: [],
 }
+
