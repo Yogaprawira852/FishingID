@@ -1,5 +1,6 @@
 @extends("layouts.main")
 @section("container")
+
     <section class=" mx-auto pt-10">
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
       <div
@@ -34,7 +35,7 @@
             </div>
           </div>
           <button
-            class="w-full bg-orange-400 text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300"
+            class="w-full bg-orange-400 text-white p-2 rounded-lg mb-6 hover:bg-white  hover:border hover:border-gray-300"
           >
             Sign in
           </button>
