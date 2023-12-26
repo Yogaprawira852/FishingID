@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +16,19 @@ use App\Http\Models\Category;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/product', function () {
-    return view('product');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/item', function () {
+    return view('item');
 });
 Route::get('/login', function () {
     return view('login.index');
 });
 
-Route::get('/categories', function(){
+Route::get('/categories', function () {
     return view('categories', [
+        'title' => 'Post Categories',
+        'active' => 'categories',
+        'categories' => Category::all()
     ]);
 });
 
