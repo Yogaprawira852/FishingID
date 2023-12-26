@@ -10,7 +10,7 @@
         <div class="flex flex-col justify-center p-8 md:p-14">
           <span class="mb-3 text-4xl font-bold">Selamat Datang </span>
           <span class="font-light text-gray-400 mb-8">
-            Silahkan Masukan Informasi Login Anda !
+            Silahkan Masukan Informasi Login Anda !!
           </span>
           <div class="py-4">
             <span class="mb-2 text-md">Username</span>
@@ -34,6 +34,7 @@
             <div class="mr-24">
             </div>
           </div>
+          
           <button
             class="w-full bg-orange-400 text-white p-2 rounded-lg mb-6 hover:bg-white  hover:border hover:border-gray-300"
           >
