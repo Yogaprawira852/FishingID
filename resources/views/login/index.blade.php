@@ -3,7 +3,7 @@
 @section('container')
 
 
-<section class=" mx-auto pt-10">
+<section class="mx-auto">
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
       <div
         class=" flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0"
@@ -17,7 +17,7 @@
 
     @if(session()->has('success'))
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-          {{session('success')}} 
+          {{session('success')}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       @endif
@@ -28,13 +28,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       @endif
-      
-        <main class="form-signin w-100 m-auto">
+
+        <main class="form-signin w-100 m-auto mt-1">
             <form action="/login" method="post">
               @csrf
               <div class="py-4">
               <span class="mb-2 text-md">Email</span>
-              <input type="email" name="email" class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 form-control @error('email') is-invalid @enderror" 
+              <input type="email" name="email" class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 form-control @error('email') is-invalid @enderror"
                 id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
                 @error('email')
                   <div class="invalid-feedback">
@@ -50,8 +50,8 @@
             </form>
             <small class="d-block text-center mt-3 mx-2">Not registered?<a class="mx-2 font-semibold" href="/register">Register Now!</a></small>
           </main>
-          
-    </div>   
+
+    </div>
     <div class="">
           <img
             src="img/reel.jpg"
