@@ -14,4 +14,11 @@ class HomeController extends Controller
 
         return view('home', ['items' => $items]);
     }
+
+    public function showItem($id)
+    {
+        $item = Item::with('category')->find($id);
+
+        return view('item', ['item' => $item]);
+    }
 }

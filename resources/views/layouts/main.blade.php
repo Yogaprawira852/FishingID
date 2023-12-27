@@ -17,14 +17,14 @@
 
 <body class="font-[Poppins] ">
 
-    @if (!request()->is('login'))
+    @if (!request()->is('login') && !request()->is('item/*'))
         @include('partials.navbar')
     @endif
 
     @yield('container')
 
     @if (!request()->is('login'))
-    @include('partials.footer');
+        @include('partials.footer');
     @endif
 
 </html>
