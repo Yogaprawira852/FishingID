@@ -15,7 +15,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['fishing rod', 'bait', 'essence'];
+        $categories = ['Joran', 'Reel', 'Kail', 'Umpan', 'Senar'];
 
         foreach ($categories as $category) {
             DB::table('categories')->insert([
