@@ -1,7 +1,7 @@
+
 @extends('layouts.main')
 
-@section('container')
-    <style>
+<style>
         .total-price-container {
             text-align: center;
             margin-top: 20px;
@@ -44,8 +44,10 @@
         .cartButton {
             margin-top: 20px;
         }
-    </style>
-    <section class="grid grid-cols-3 mx-20 my-10">
+</style>
+@section('container')
+   
+    <section class="grid grid-cols-3 mx-20 mt-40 mb-10">
         <div class="flex justify-center">
             <div class="flex flex-col items-center">
                 <img class="rounded-md mb-5" src="{{ asset('img/' . $item->image) }}" alt="">

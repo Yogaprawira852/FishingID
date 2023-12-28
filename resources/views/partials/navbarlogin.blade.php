@@ -1,9 +1,40 @@
+
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+<!-- Kalo udah login navbarnya ganti pake navbar yang ini bang dik dik -->
+
+
+
 <header class="fixed w-[100%]  ">
       <nav  class="  bg-slate-300 flex justify-between items-center  mx-auto  rounded px-10  ">
         <div class="flex flex-row">
            <a  href="/"><img class="w-20 mr-5 py-2" src="img/logo.png" alt=""></a>
          </div>
-
+         <div class="flex w-[55%] h-2/3 rounded mx-5 bg-white">
+                <input type="search" name="search" id="search" placeholder="What are you looking for?"
+                    class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none">
+                <button id="searchButton"
+                    class="m-2 rounded bg-orange-400 hover:bg-orange-300 px-4 py-2 text-white flex">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </div>
         <div class=" "> 
         <div class="relative inline-block">
                             <button onclick="toggleDD('myDropdown')" class="drop-button text-slate-600 py-2 px-2"><i class="fa-solid fa-circle-user fa-2xl" style="color: #475569;"></i> Admin <i style="color: #475569;" class="fa-solid fa-caret-down"></i></button>

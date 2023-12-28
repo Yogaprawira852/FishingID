@@ -15,6 +15,7 @@
 </head>
 
 <body class="font-[Poppins] ">
+    
 
     @if (!request()->is('login') && !request()->is('register'))
         @include('partials.navbar')

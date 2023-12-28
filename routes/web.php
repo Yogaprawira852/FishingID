@@ -39,6 +39,9 @@ Route::get('/itemManagement', function () {
 Route::get('/profile', function () {
     return view('dashboard/profile');
 });
+Route::get('/produk', function () {
+    return view('product');
+});
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
