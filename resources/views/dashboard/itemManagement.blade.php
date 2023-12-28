@@ -9,11 +9,18 @@
                 </div>
                 <div class="flex flex-col">
                    <button class="bg-orange-400 mr-10 py-2 px-2 rounded-lg font-lato font-semibold text-white"> + Add Item </button>
-
                 </div>
             </div>        
+            <div class="flex w-[55%] h-2/3 rounded mx-5 bg-white border-2 mt-5">
+                <input type="search" name="search" id="search" placeholder="Search "
+                    class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none">
+                <button id="searchButton"
+                    class="m-2 rounded bg-orange-400 hover:bg-orange-300 px-4 py-2 text-white flex">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </div>
             <div>
-            <table class="w-full border-b border-gray-200 mt-10">
+            <table class="w-full border-b border-gray-200 mt-10 mb-80">
         <thead>
           <tr class="text-sm font-medium text-gray-700 border-b border-gray-200">
             <td class="pl-10">
@@ -64,7 +71,7 @@
             <td>
               <div class="flex gap-x-2 justify-center items-center">
              <!-- link edit item ini  -->
-              <a href="#" class="p-2 bg-gray-200 rounded-md hover:bg-gray-300"><i class="fa-solid fa-pen-to-square" style="color: #969696;"></i>
+              <a href="#" class="p-2 bg-gray-200 rounded-md hover:bg-gray-300"><i class="fa-solid fa-pen-to-square" style="color: #878787;"></i>
                 </a>
               </div>
             </td>
