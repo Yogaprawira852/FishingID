@@ -1,13 +1,27 @@
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
 
-<footer  class=" font-semibold text-gray-800 bg-slate-300 flex justify-between items-center rounded px-10">
-  <div class="">
-    <P>Contact Us</P>
-    <p>About Us</p>
-    <p>Copyright</p>
-  </div>
+    .main-content {
+        flex: 1;
+    }
 
-    <div>
-        <a href="/"><img class="w-28" src="img/logo.png" alt=""></a>
-    </div>
+    .footer {
+        color: black; 
+        text-align: center;
+        padding: 1rem;
+    }
 
-</footer></body>
+    .solid {
+        border-bottom: 2px solid #000000;
+        display: inline-block;
+        padding-bottom: 4px;
+    }
+</style>
+<footer class="footer bg-slate-300">
+    <p class="solid">&copy; 2023 FishingID. All rights reserved.</p>
+</footer>

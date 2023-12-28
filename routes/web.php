@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
@@ -15,19 +17,25 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/item/{id}', [HomeController::class, 'showItem'])->name('item.show');
 Route::get('/login', function () {
     return view('login.index');
 });
-Route::get('/login1', function () {
-    return view('login');
-});
 
+Route::get('/categories', function () {
+    return view('categories', [
+        'title' => 'Post Categories',
+        'active' => 'categories',
+        'categories' => Category::all()
+    ]);
+});
+Route::get('/dashboard', function () {
+    return view('dashboard/dashboard');
+});
+Route::get('/itemManagement', function () {
+    return view('dashboard/itemManagement');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
