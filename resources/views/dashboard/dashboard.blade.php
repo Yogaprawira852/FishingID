@@ -19,7 +19,7 @@
 
     <div class="bg-slate-200 rounded-3xl py-10  flex flex-col shadow-lg border-4 border-orange-400">
          <h1 class=" mx-auto "><i class="fa-solid fa-wallet fa-2xl"></i> Total Ravenue</h1>
-         <h1 class="mx-auto mt-5 text-5xl">Rp.2000.00</h1>
+         <h1 class="mx-auto mt-5 text-4xl">Rp.200.000.000.00</h1>
 
     </div>
 </div>
