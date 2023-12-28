@@ -5,10 +5,9 @@
   <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
     p-2 w-[300px] overflow-y-auto text-center bg-slate-300  h-screen">
     <div class="text-gray-100 text-xl">
-    <a href="/"><div class="p-2.5 mt-1 flex items-center rounded-md ">
+    <a href="/"><div class="  flex items-center rounded-md ">
          <img class="w-20 py-2" src="img/logo.png" alt="">
         <h1 class="text-[15px]  ml-3 text-lg text-slate-600 font-extrabold">FishingID TackleBox</h1>
-        <i class="bi bi-x ml-20  lg:hidden" ></i>
       </div></a>
       <hr class="my-2 text-gray-600">
 
