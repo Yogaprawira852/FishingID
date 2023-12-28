@@ -16,17 +16,17 @@
         <i class="fa-solid fa-house" style="color: #475569;"></i>
           <span class="text-[15px] ml-4 text-slate-600 font-semibold">Home</span>
         </div></a>
-        <a href="/dashboard"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300    hover:bg-slate-400">
+        <a href="/dashboard"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 {{Request::is('dashboard')?'border-l-4 border-orange-400':''}}   hover:bg-slate-400">
         <i class="fa-solid fa-chart-line" style="color: #475569;"></i>
           <span class="text-[15px] ml-4 text-slate-600 font-semibold">Dashboard</span>
         </div></a>
-        <a href="/itemManagement"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300   hover:bg-slate-400">
+        <a href="/itemManagement"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 {{Request::is('itemManagement')?'border-l-4 border-orange-400':''}}   hover:bg-slate-400">
         <i class="fa-solid fa-boxes-stacked" style="color: #475569;"></i>
           <span class="text-[15px] ml-4 text-slate-600 font-semibold">Items Manegement</span>
         </div></a>
-        <a href="/profile"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300   hover:bg-slate-400">
+        <a href="/profile"><div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 {{Request::is('profile')?'border-l-4 border-orange-400':''}}  hover:bg-slate-400">
         <i class="fa-solid fa-user" style="color: #475569 ;"></i>
-          <span class="text-[15px] ml-4 text-slate-600 font-semibold">profile</span>
+          <span class="text-[15px] ml-4 text-slate-600 font-semibold">Profile</span>
         </div></a>
        
        
