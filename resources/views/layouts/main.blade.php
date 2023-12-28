@@ -16,7 +16,7 @@
 </head>
 <body class="font-[Poppins] ">
 
-    @if (!request()->is('login') && !request()->is('register'))
+    @if (!request()->is('login') && !request()->is('register') && !request()->is('item/*')))
         @include('partials.navbar')
     @endif
 
@@ -27,4 +27,3 @@
     @endif
 
 </html>
-

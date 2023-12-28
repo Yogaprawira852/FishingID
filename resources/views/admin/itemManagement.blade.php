@@ -1,6 +1,6 @@
-@extends("layouts.maindash")
+@extends("admin.main")
 @section("container")
-@include('dashboard.sidebardash');
+@include('admin.sidebar');
     <div class="ml-80 mt-20">
             <div class="flex flex-row justify-between border-b-2 ">
                 <div class="flex flex-col">
@@ -10,7 +10,7 @@
                 <div class="flex flex-col">
                    <button class="bg-orange-400 mr-10 py-2 px-2 rounded-lg font-lato font-semibold text-white"> + Add Item </button>
                 </div>
-            </div>        
+            </div>
             <div class="flex w-[55%] h-2/3 rounded mx-5 bg-white border-2 mt-5">
                 <input type="search" name="search" id="search" placeholder="Search "
                     class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none">
@@ -58,7 +58,7 @@
                                                      <!-- Kategori -->
                 <div class="font-medium text-gray-400">kategori</div>
               </div>
-            </td>                               
+            </td>
                                              <!-- Harga -->
             <td class="font-medium text-center">Rp.20.000</td>
                                         <!-- jumlah terjual -->
@@ -79,6 +79,6 @@
           <!-- sampai sini -->
         </tbody>
       </table>
-            </div>    
+            </div>
         </div>
-@endsection 
+@endsection

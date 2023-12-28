@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,12 +21,25 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)) {
-            $request -> session()->regenerate();
-            return redirect()->intended('/dashboard');
+        $user = User::where('email', $credentials['email'])->first();
+
+        if (!$user) {
+            return back()->with('message', 'Email not found');
         }
 
-        return back()->with('loginError', 'Wrong Password or Email');
+        if (password_verify($credentials['password'], $user->password)) {
+            if (Auth::loginUsingId($user->id)) {
+                $request->session()->regenerate();
+
+                if ($user->role === 'admin') {
+                    return redirect()->intended('/admin/dashboard');
+                } elseif ($user->role === 'user') {
+                    return redirect()->intended('/user/dashboard');
+                }
+            }
+        }
+
+        return back()->with('message', 'Wrong Password or Email')->withErrors(['email' => 'Invalid credentials']);
     }
 
     public function logout() {
