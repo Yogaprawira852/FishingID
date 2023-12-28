@@ -27,7 +27,6 @@
         </nav>
     </header>
 
-    <!-- Add your JavaScript script here -->
     <script>
         document.getElementById('search').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
