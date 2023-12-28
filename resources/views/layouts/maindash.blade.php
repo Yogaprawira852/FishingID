@@ -14,7 +14,7 @@
 </head>
 <body class="font-[Poppins] ">
 
-@include('partials.navbardash');
+<!-- @include('partials.navbardash'); -->
 
     @yield('container')
 

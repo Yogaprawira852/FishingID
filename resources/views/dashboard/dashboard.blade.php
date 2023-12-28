@@ -2,7 +2,7 @@
 @section("container")
 @include('dashboard.sidebardash');
 
-<h1 class="ml-80 mt-20 text-xl font-bold ">Welcome To Dashboard, Admin !!!</h1>
+<h1 class="ml-80 mt-10 text-xl font-bold ">Welcome To Dashboard, Admin !!!</h1>
 <div class="grid grid-cols-3 gap-20 ml-80 mt-10 mr-5">
         
     <div class="bg-slate-200 rounded-3xl py-10 flex flex-col shadow-lg border-4 border-orange-400">
@@ -19,7 +19,7 @@
 
     <div class="bg-slate-200 rounded-3xl py-10  flex flex-col shadow-lg border-4 border-orange-400">
          <h1 class=" mx-auto "><i class="fa-solid fa-wallet fa-2xl"></i> Total Ravenue</h1>
-         <h1 class="mx-auto mt-5 text-4xl overflow-hidden">Rp.200.000.000.00</h1>
+         <span class="mx-auto mt-5 text-4xl text-ellipsis overflow-hidden">Rp.200.000.000</span>
 
     </div>
 </div>

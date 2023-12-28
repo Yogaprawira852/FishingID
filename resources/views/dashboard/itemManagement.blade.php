@@ -1,7 +1,7 @@
 @extends("layouts.maindash")
 @section("container")
 @include('dashboard.sidebardash');
-    <div class="ml-80 mt-20">
+    <div class="ml-80 ">
             <div class="flex flex-row justify-between border-b-2 ">
                 <div class="flex flex-col">
                     <h1 class="font-lato font-semibold text-black text-xl">Items Management</h1>
@@ -45,18 +45,19 @@
             <a href=" #"><td class="flex gap-x-4 items-center py-4 pl-10">
                                                                  <!-- link Hapus Item ini  -->
             <a class="p-2 bg-gray-200 rounded-md hover:bg-gray-300" href="  "><i class="fa-solid fa-trash-can" style="color: #878787;"></i></a>
-              <img
-                src="img/logo.png"
+              <!-- Gambar -->
+            <img
+                src="img/hero.png"
                 alt=""
                 class="w-40 aspect-[3/2] rounded-lg object-cover object-top border border-gray-200"
               />
               <div>
                 <span class="text-lg font-semibold text-gray-700">
            <!-- nama Produk -->
-                  nama
+                  Tackle Box
                 </span>
                                                      <!-- Kategori -->
-                <div class="font-medium text-gray-400">kategori</div>
+                <div class="font-medium text-gray-400">Nama Kategori</div>
               </div>
             </td>                               
                                              <!-- Harga -->
