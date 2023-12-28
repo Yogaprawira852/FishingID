@@ -30,8 +30,12 @@ Route::get('/categories', function () {
         'categories' => Category::all()
     ]);
 });
-
-
+Route::get('/dashboard', function () {
+    return view('dashboard/dashboard');
+});
+Route::get('/itemManagement', function () {
+    return view('dashboard/itemManagement');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
