@@ -1,12 +1,16 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Models\Category;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\userController;
+use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\userController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +51,28 @@ Route::post('/register', [RegisterController::class, 'store']);
 //admin
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index']);
+});
+
+// api login github
+Route::get('/auth/github/redirect', function () {
+    return Socialite::driver('github')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $githubUser = Socialite::driver('github')->user();
+
+    $user = User::updateOrCreate ([
+        'github_id' => $githubUser->id,
+    ], [
+        'name' => $githubUser->nickname,
+        'email' => $githubUser->email,
+        'password' => Hash::make('rahasia'),
+        'github_token' => $githubUser->token,
+        'github_refresh_token' => $githubUser->refreshToken,
+ 
+    ]);
+
+    Auth::login($user);
+ 
+    return redirect('/admin/dashboard');
 });
