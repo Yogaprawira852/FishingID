@@ -46,7 +46,7 @@
 
                 <!-- Submit button -->
                 <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded">
-                    Create Item
+                    Edit Item
                 </button>
             </form>
         </div>
