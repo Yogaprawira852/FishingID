@@ -9,7 +9,7 @@ class ItemController extends Controller
     public function index()
     {
         $items = Item::all();
-        return view('admin.itemManagement', compact('items'));
+        return view('admin.item.index', compact('items'));
     }
     
 
@@ -40,7 +40,7 @@ class ItemController extends Controller
     public function edit(Item $item)
     {
         // Tampilkan halaman form untuk mengedit item
-        return view('dashboard.editItem', compact('item'));
+        return view('admin.item.edit', compact('item'));
     }
 
     public function update(Request $request, Item $item)

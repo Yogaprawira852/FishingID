@@ -42,13 +42,12 @@ Route::get('/itemManagement', function () {
 });
 
 Route::get('admin/item/create', [ItemController::class, 'create']);
+Route::get('admin/item/edit', [ItemController::class, 'edit']);
 
 Route::get('/dashboard', function () {
     return view('/admin/dashboard');
 });
-Route::get('/profile', function () {
-    return view('dashboard/profile');
-});
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -60,6 +59,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 //admin
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index']);
+});
+// user
+Route::middleware(['auth'])->group(function () {
+    Route::get('/user/dashboard', [UserController::class, 'index']);
 });
 
 // api login github
@@ -89,3 +92,4 @@ Route::get('/auth/callback', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 });
+

@@ -16,14 +16,13 @@
 </head>
 <body class="font-[Poppins] ">
 
-    @if (!request()->is('login') && !request()->is('register') && !request()->is('item/*'))
-        @include('partials.navbar')
+    @if (!request()->is('item/*'))
+        @include('user.layouts.navbar')
     @endif
 
     @yield('container')
 
-    @if (!request()->is('login') && !request()->is('register'))
-        @include('partials.footer')
-    @endif
+    @include('user.layouts.footer')
+
 
 </html>
