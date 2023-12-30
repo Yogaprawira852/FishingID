@@ -6,8 +6,9 @@
             <h1 class="text-2xl font-semibold text-gray-800 mb-4">Create New Item</h1>
 
             <!-- Form to create a new item -->
-            <form action="" method="POST" enctype="multipart/form-data">
-                @csrf
+            <form method="post" action="{{ route('admin.item.store') }}" enctype="multipart/form-data">
+    @csrf
+    @method('PUT')
 
                 <!-- Title -->
                 <div class="mb-4">
@@ -43,6 +44,12 @@
                 <div class="mb-4">
                     <label for="rating" class="block text-gray-600 font-semibold">Rating:</label>
                     <input type="text" name="rating" id="rating" class="w-full border rounded py-2 px-3">
+                </div>
+
+                <!-- Kategori -->
+                <div class="mb-4">
+                    <label for="category_id" class="block text-gray-600 font-semibold">category_id:</label>
+                    <input type="text" name="category_id" id="category_id" class="w-full border rounded py-2 px-3">
                 </div>
 
                 <!-- Submit button -->
