@@ -14,9 +14,10 @@
 </head>
 <body class="font-[Poppins] ">
 
-@include('admin.navbar');
+@include('admin.layouts.navbar');
 
     @yield('container')
 
+@include('admin.layouts.sidebar')
 @include('partials.footer');
 </html>

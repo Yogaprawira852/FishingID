@@ -1,11 +1,12 @@
 <?php
 
-use App\Models\Category;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\userController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminController;
@@ -37,7 +38,13 @@ Route::get('/categories', function () {
     ]);
 });
 Route::get('/itemManagement', function () {
-    return view('dashboard/itemManagement');
+    return view('/admin/item/index');
+});
+
+Route::get('admin/item/create', [ItemController::class, 'create']);
+
+Route::get('/dashboard', function () {
+    return view('/admin/dashboard');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -75,4 +82,8 @@ Route::get('/auth/callback', function () {
     Auth::login($user);
  
     return redirect('/admin/dashboard');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 });

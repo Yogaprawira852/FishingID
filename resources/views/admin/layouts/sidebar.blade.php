@@ -11,13 +11,13 @@
             </a>
         </li>
         <li class="mb-4">
-            <a href="" class="flex items-center px-6 py-3 hover:bg-gray-700">
+            <a href="/dashboard" class="flex items-center px-6 py-3 hover:bg-gray-700">
                 <i class="fas fa-chart-bar mr-3"></i>
                 Dashboard
             </a>
         </li>
         <li class="mb-4">
-            <a href="" class="flex items-center px-6 py-3 hover:bg-gray-700">
+            <a href="/itemManagement" class="flex items-center px-6 py-3 hover:bg-gray-700">
                 <i class="fas fa-cube mr-3"></i>
                 Items Management
             </a>

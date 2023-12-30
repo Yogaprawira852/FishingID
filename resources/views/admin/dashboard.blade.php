@@ -1,6 +1,6 @@
-@extends("admin.main")
+@extends("admin.layouts.main")
 @section("container")
-@include('admin.sidebar');
+@include('admin.layouts.sidebar');
 
 <h1 class="ml-80 mt-20 text-xl font-bold ">Welcome To Dashboard, Admin !!!</h1>
 <div class="grid grid-cols-3 gap-20 ml-80 mt-10 mr-5">

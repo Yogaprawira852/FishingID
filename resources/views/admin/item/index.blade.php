@@ -1,6 +1,5 @@
-@extends("admin.main")
+@extends("admin.layouts.main")
 @section("container")
-@include('admin.sidebar');
     <div class="ml-80 mt-20">
             <div class="flex flex-row justify-between border-b-2 ">
                 <div class="flex flex-col">
@@ -8,7 +7,7 @@
                     <h1 class="text-slate-400 font-semibold">You can manage your items here</h1>
                 </div>
                 <div class="flex flex-col">
-                   <button class="bg-orange-400 mr-10 py-2 px-2 rounded-lg font-lato font-semibold text-white"> + Add Item </button>
+                   <a href="admin/item/create" class="bg-orange-400 mr-10 py-2 px-2 rounded-lg font-lato font-semibold text-white"> + Add Item </a>
                 </div>
             </div>
             <div class="flex w-[55%] h-2/3 rounded mx-5 bg-white border-2 mt-5">
@@ -40,10 +39,9 @@
           <tr
             class="hover:bg-gray-100 transition-colors group">
             <!-- looping dari sini -->
-            <!--      |
-                      v    link item. jika di klik ke halaman item -->
+            <!-- link item. jika di klik ke halaman item -->
             <a href=" #"><td class="flex gap-x-4 items-center py-4 pl-10">
-                                                                 <!-- link Hapus Item ini  -->
+            <!-- link Hapus Item ini  -->
             <a class="p-2 bg-gray-200 rounded-md hover:bg-gray-300" href="  "><i class="fa-solid fa-trash-can" style="color: #878787;"></i></a>
               <img
                 src="img/logo.png"
@@ -55,23 +53,23 @@
            <!-- nama Produk -->
                   nama
                 </span>
-                                                     <!-- Kategori -->
+            <!-- Kategori -->
                 <div class="font-medium text-gray-400">kategori</div>
               </div>
             </td>
-                                             <!-- Harga -->
+            <!-- Harga -->
             <td class="font-medium text-center">Rp.20.000</td>
-                                        <!-- jumlah terjual -->
+            <!-- jumlah terjual -->
             <td class="font-medium text-center">200</td>
             <td class="text-center">
-                                <!-- rating /5 -->
+            <!-- rating /5 -->
               <span class="font-medium">4</span>
               <span class="text-gray-400">/5</span>
             </td>
             <td>
               <div class="flex gap-x-2 justify-center items-center">
              <!-- link edit item ini  -->
-              <a href="#" class="p-2 bg-gray-200 rounded-md hover:bg-gray-300"><i class="fa-solid fa-pen-to-square" style="color: #878787;"></i>
+              <a href="admin/item/edit" class="p-2 bg-gray-200 rounded-md hover:bg-gray-300"><i class="fa-solid fa-pen-to-square" style="color: #878787;"></i>
                 </a>
               </div>
             </td>
