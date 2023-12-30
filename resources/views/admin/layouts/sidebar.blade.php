@@ -1,6 +1,6 @@
 <div class="fixed bg-gray-800 text-white h-full w-1/5 py-4">
-    <div class="flex flex-col text-center mb-8">
-        <img src="img/logo.png" alt="Logo" class="w-20  mx-auto rounded-full">
+    <div class="text-center mb-8">
+        <img src="img/logo.png" alt="Logo" class="w-12 h-12 mx-auto rounded-full">
         <p class="mt-2 font-semibold">Admin Name</p>
     </div>
     <ul class="list-none">
