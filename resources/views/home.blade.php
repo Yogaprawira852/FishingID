@@ -1,5 +1,10 @@
 @extends('layouts.main')
 @section('container')
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     <!-- hero section -->
     <div class="mt-4">
         <br>
@@ -15,7 +20,7 @@
                                 Fishing Gear</p>
                             <p class="w-full text-center text-2xl font-bold md:text-5xl py-3 text-slate-600">100% original
                             </p>
-                            <a href="/login?message=login">
+                            <a href="#itemCard">
                                 <button
                                     class="text-lg md:text-2xl bg-slate-600 text-white hover:bg-slate-500 py-3 px-5 my-5 rounded-md">
                                     Check Our Items
@@ -29,10 +34,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 2 (Tambahkan slide lain jika diperlukan) -->
-                <!-- <div class="swiper-slide">
-                                ... (Isi dengan konten slide kedua)
-                            </div> -->
             </div>
 
             <!-- Add Pagination -->
@@ -60,6 +61,15 @@
         </div>
     </div>
     <hr>
+
+    <!-- Scroll-to-top button -->
+    <div id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-orange-400 p-3 rounded-full cursor-pointer hidden">
+        <i class="fas fa-arrow-up fa-lg text-white"></i>
+    </div>
+
+    <div id="itemCard"></div>
+    <!-- Scroll-to-top button -->
+
     <!-- Item card -->
     <div class="mx-20 my-10">
         <div class="grid grid-cols-4 justify-items-center gap-2 py-20">
@@ -84,13 +94,13 @@
                                     <!-- harga -->
                                     <span class="text-xl font-bold">Rp.{{ number_format($item->price, 0, ',', '.') }}</span>
                                 </div>
-                                <div class="mt-5 flex gap-2 pt-10 ">
+                                <div class="mt-5 flex gap-2">
                                     <button
-                                        class="flex-grow flex justify-center items-center text-white font-semibold bg-orange-400 hover:bg-orange-300 transition rounded-md">
+                                        class="px-3 py-3 rounded bg-orange-400 hover:bg-orange-300 text-white font-semibold tracking-wider transition">
                                         Buy now
                                     </button>
                                     <button
-                                        class="px-3 py-3 rounded bg-slate-400 hover:bg-slate-300  tracking-wider transition">
+                                        class="flex-grow flex justify-center items-center bg-gray-400 hover:bg-gray-300 transition rounded-md">
                                         <i class="fa-solid fa-cart-plus fa-xl" style="color: #000000;"></i>
                                     </button>
                                 </div>
@@ -109,6 +119,7 @@
     </div>
     </div>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script>
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -121,4 +132,24 @@
             },
         });
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', function () {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        });
+    });
+</script>
+
 @endsection

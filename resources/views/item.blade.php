@@ -1,7 +1,7 @@
-
 @extends('layouts.main')
 
-<style>
+@section('container')
+    <style>
         .total-price-container {
             text-align: center;
             margin-top: 20px;
@@ -44,10 +44,8 @@
         .cartButton {
             margin-top: 20px;
         }
-</style>
-@section('container')
-   
-    <section class="grid grid-cols-3 mx-20 mt-40 mb-10">
+    </style>
+    <section class="grid grid-cols-3 mx-20 my-10">
         <div class="flex justify-center">
             <div class="flex flex-col items-center">
                 <img class="rounded-md mb-5" src="{{ asset('img/' . $item->image) }}" alt="">
@@ -94,11 +92,11 @@
         <div class="total-price-container">
             <h1 class="text-xl font-bold font-lato border-b-2 mb-3">Total Price</h1>
             <div class="quantity-controls">
-                <button class="quantity-btn " onclick="updateQuantity(-1)">
+                <button class="quantity-btn" onclick="updateQuantity(-1)">
                     <i class="fa-solid fa-minus"></i>
                 </button>
-                <span class="quantity-display border-2 border-black py-1 rounded-md px-10">1</span>
-                <button class="quantity-btn " onclick="updateQuantity(1)">
+                <span class="quantity-display">1</span>
+                <button class="quantity-btn" onclick="updateQuantity(1)">
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,9 @@
         href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@1,200&family=Rubik&display=swap"
         rel="stylesheet">
 </head>
-
 <body class="font-[Poppins] ">
-    
 
-    @if (!request()->is('login') && !request()->is('register'))
+    @if (!request()->is('login') && !request()->is('register') && !request()->is('item/*')))
         @include('partials.navbar')
     @endif
 
@@ -28,4 +27,3 @@
     @endif
 
 </html>
-

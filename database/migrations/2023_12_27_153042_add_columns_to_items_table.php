@@ -30,7 +30,6 @@ class AddColumnsToItemsTable extends Migration
     public function down()
     {
         Schema::table('items', function (Blueprint $table) {
-            // Reverse the changes made in the 'up' method
             $table->dropColumn('totalSold');
             $table->dropColumn('rating');
         });
