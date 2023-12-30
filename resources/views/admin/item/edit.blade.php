@@ -1,82 +1,54 @@
 @extends("admin.layouts.main")
-@section("container")
-    <div class="ml-80 mt-20">
-            <div class="flex flex-row justify-between border-b-2 ">
-                <div class="flex flex-col">
-                    <h1 class="font-lato font-semibold text-black text-xl">Items Management</h1>
-                    <h1 class="text-slate-400 font-semibold">You can manage your items here</h1>
+@section('container')
+    <div class=" ml-80 mt-20 mx-8 my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="md:col-span-1 md:mx-end">
+            <h1 class="text-2xl font-semibold text-gray-800 mb-4">Edit Item</h1>
+
+            <!-- Form to create a new item -->
+            <form action="" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                <!-- Title -->
+                <div class="mb-4">
+                    <label for="title" class="block text-gray-600 font-semibold">Title:</label>
+                    <input type="text" name="title" id="title" class="w-full border rounded py-2 px-3">
                 </div>
-                <div class="flex flex-col">
-                   <a href="admin/item/create" class="bg-orange-400 mr-10 py-2 px-2 rounded-lg font-lato font-semibold text-white"> + Add Item </a>
+
+                <!-- Price -->
+                <div class="mb-4">
+                    <label for="price" class="block text-gray-600 font-semibold">Price:</label>
+                    <input type="text" name="price" id="price" class="w-full border rounded py-2 px-3">
                 </div>
-            </div>
-            <div class="flex w-[55%] h-2/3 rounded mx-5 bg-white border-2 mt-5">
-                <input type="search" name="search" id="search" placeholder="Search "
-                    class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none">
-                <button id="searchButton"
-                    class="m-2 rounded bg-orange-400 hover:bg-orange-300 px-4 py-2 text-white flex">
-                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+
+                <!-- Body -->
+                <div class="mb-4">
+                    <label for="body" class="block text-gray-600 font-semibold">Body:</label>
+                    <textarea name="body" id="body" class="w-full border rounded py-2 px-3"></textarea>
+                </div>
+
+                <!-- Image -->
+                <div class="mb-4">
+                    <label for="image" class="block text-gray-600 font-semibold">Image:</label>
+                    <input type="file" name="image" id="image" class="border py-2 px-3">
+                </div>
+
+                <!-- Total Sold -->
+                <div class="mb-4">
+                    <label for="totalSold" class="block text-gray-600 font-semibold">Total Sold:</label>
+                    <input type="text" name="totalSold" id="totalSold" class="w-full border rounded py-2 px-3">
+                </div>
+
+                <!-- Rating -->
+                <div class="mb-4">
+                    <label for="rating" class="block text-gray-600 font-semibold">Rating:</label>
+                    <input type="text" name="rating" id="rating" class="w-full border rounded py-2 px-3">
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded">
+                    Create Item
                 </button>
-            </div>
-            <div>
-            <table class="w-full border-b border-gray-200 mt-10 mb-80">
-        <thead>
-          <tr class="text-sm font-medium text-gray-700 border-b border-gray-200">
-            <td class="pl-10">
-              <div class="flex items-center gap-x-4">
-                <span class="font-semibold">Product Name</span>
-              </div>
-            </td>
-            <td class="py-4 px-4 text-center">Price</td>
-            <td class="py-4 px-4 text-center">sold</td>
-            <td class="py-4 px-4 text-center">Rating</td>
-            <td class="py-4 pr-10 pl-4 text-center">
-              <FilterIcon class="w-6 h-6 fill-current" />
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            class="hover:bg-gray-100 transition-colors group">
-            <!-- looping dari sini -->
-            <!-- link item. jika di klik ke halaman item -->
-            <a href=" #"><td class="flex gap-x-4 items-center py-4 pl-10">
-            <!-- link Hapus Item ini  -->
-            <a class="p-2 bg-gray-200 rounded-md hover:bg-gray-300" href="  "><i class="fa-solid fa-trash-can" style="color: #878787;"></i></a>
-              <img
-                src="img/logo.png"
-                alt=""
-                class="w-40 aspect-[3/2] rounded-lg object-cover object-top border border-gray-200"
-              />
-              <div>
-                <span class="text-lg font-semibold text-gray-700">
-           <!-- nama Produk -->
-                  nama
-                </span>
-            <!-- Kategori -->
-                <div class="font-medium text-gray-400">kategori</div>
-              </div>
-            </td>
-            <!-- Harga -->
-            <td class="font-medium text-center">Rp.20.000</td>
-            <!-- jumlah terjual -->
-            <td class="font-medium text-center">200</td>
-            <td class="text-center">
-            <!-- rating /5 -->
-              <span class="font-medium">4</span>
-              <span class="text-gray-400">/5</span>
-            </td>
-            <td>
-              <div class="flex gap-x-2 justify-center items-center">
-             <!-- link edit item ini  -->
-              <a href="admin/item/edit" class="p-2 bg-gray-200 rounded-md hover:bg-gray-300"><i class="fa-solid fa-pen-to-square" style="color: #878787;"></i>
-                </a>
-              </div>
-            </td>
-          </tr></a>
-          <!-- sampai sini -->
-        </tbody>
-      </table>
-            </div>
+            </form>
         </div>
+    </div>
 @endsection
