@@ -44,7 +44,7 @@
         </section>
 
         <hr>
-    </div> <!-- kaetegori -->
+    </div> <!-- kategori -->
     <div>
         <div class=" mx-[10%] my-10 border-4 border-orange-400 rounded-lg shadow-md ">
             <p class="text-center py-5 text-base font-semibold bg-slate-200 mx-20 rounded-lg my-5">Kategori</p>

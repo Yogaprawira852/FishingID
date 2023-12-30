@@ -46,7 +46,9 @@ Route::get('admin/item/create', [ItemController::class, 'create']);
 Route::get('/dashboard', function () {
     return view('/admin/dashboard');
 });
-
+Route::get('/profile', function () {
+    return view('dashboard/profile');
+});
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
