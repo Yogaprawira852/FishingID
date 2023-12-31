@@ -29,7 +29,7 @@
                         </div>
                         <div>
                             <img class="h-80 w-80 object-cover py-2 px-5 lg:w-[500px] lg:h-[500px] border-r-4 border-slate-400"
-                                src="img/hero.png" alt="">
+                                src="https://source.unsplash.com/800x600/?fishing-tool" alt="">
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <a href="/item/{{ $item->id }}">
                         <div class="card">
                             <!-- Gambar -->
-                            <img class="w-full h-full object-cover" src="img/hero.png" alt="produk">
+                            <img class="w-full h-full object-cover" src="https://source.unsplash.com/800x600/?fishing-tool" alt="produk">
                             <div class="p-5 flex flex-col gap-3">
                                 <div>
                                     <span class="px-3 py-1 rounded-full text-xs bg-gray-100">{{ $item->category->name }}

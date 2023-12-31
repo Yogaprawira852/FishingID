@@ -48,10 +48,10 @@
     <section class="grid grid-cols-3 mx-20 my-10">
         <div class="flex justify-center">
             <div class="flex flex-col items-center">
-                <img class="rounded-md mb-5" src="{{ asset('img/' . $item->image) }}" alt="">
+                <img class="rounded-md mb-5" src="https://source.unsplash.com/800x600/?fishing-tool" alt="">
                 <div class="flex gap-2">
                     @for ($i = 0; $i < 3; $i++)
-                        <img class="w-1/3 h-20 rounded-md" src="{{ asset('img/' . $item->image) }}" alt="">
+                        <img class="w-1/3 h-20 rounded-md" src="https://source.unsplash.com/800x600/?fishing-tool" alt="">
                     @endfor
                 </div>
             </div>
