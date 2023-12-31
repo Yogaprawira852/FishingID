@@ -30,6 +30,8 @@ Route::get('/item/{id}', [HomeController::class, 'showItem'])->name('item.show')
 Route::get('/login', function () {
     return view('login.index');
 });
+Route::get('/search', [UserController::class, 'search'])->name('search');
+
 
 Route::get('/categories', function () {
     return view('categories', [
