@@ -11,6 +11,7 @@ use App\Http\Controllers\userController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GithubController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -29,6 +30,8 @@ Route::get('/item/{id}', [HomeController::class, 'showItem'])->name('item.show')
 Route::get('/login', function () {
     return view('login.index');
 });
+Route::get('/search', [UserController::class, 'search'])->name('search');
+
 
 Route::get('/categories', function () {
     return view('categories', [
@@ -37,16 +40,7 @@ Route::get('/categories', function () {
         'categories' => Category::all()
     ]);
 });
-Route::get('/itemManagement', function () {
-    return view('/admin/item/index');
-});
 
-Route::get('admin/item/create', [ItemController::class, 'create']);
-Route::get('admin/item/edit', [ItemController::class, 'edit']);
-
-Route::get('/dashboard', function () {
-    return view('/admin/dashboard');
-});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -59,7 +53,14 @@ Route::post('/register', [RegisterController::class, 'store']);
 //admin
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index']);
+    Route::get('/admin/itemManagement', [AdminController::class, 'item']);
+    Route::get('/admin/item/create', [AdminController::class, 'create']);
+    Route::put('/admin/item/store', [AdminController::class, 'store'])->name('admin.item.store');
+    Route::delete('/admin/item/{id}', [AdminController::class, 'destroy'])->name('admin.item.destroy');
+    Route::get('/admin/item/{id}/edit', [AdminController::class, 'edit'])->name('admin.item.edit');
+    Route::put('/admin/item/{id}', [AdminController::class, 'update'])->name('admin.item.update');
 });
+
 // user
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', [UserController::class, 'index']);
@@ -70,26 +71,6 @@ Route::get('/auth/github/redirect', function () {
     return Socialite::driver('github')->redirect();
 });
 
-Route::get('/auth/callback', function () {
-    $githubUser = Socialite::driver('github')->user();
-
-    $user = User::updateOrCreate ([
-        'github_id' => $githubUser->id,
-    ], [
-        'name' => $githubUser->nickname,
-        'email' => $githubUser->email,
-        'password' => Hash::make('rahasia'),
-        'github_token' => $githubUser->token,
-        'github_refresh_token' => $githubUser->refreshToken,
- 
-    ]);
-
-    Auth::login($user);
- 
-    return redirect('/admin/dashboard');
-});
-
-Route::middleware(['auth'])->group(function () {
-    Route::get('/items', [ItemController::class, 'index'])->name('items.index');
-});
+Route::get('auth/github/redirect', [GithubController::class, 'redirect'])->name('github.login');
+Route::get('auth/github/callback', [GithubController::class, 'callback'])->name('github.callback');
 

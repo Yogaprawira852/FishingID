@@ -13,7 +13,6 @@ class ItemFactory extends Factory
     {
         return [
             'title' => $this->faker->word,
-            'excerpt' => $this->faker->sentence,
             'price' => $this->faker->randomNumber(2),
             'body' => $this->faker->paragraph,
             'category_id' => 1,

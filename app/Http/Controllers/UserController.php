@@ -26,4 +26,23 @@ class UserController extends Controller
 
         return view('item', ['item' => $item]);
     }
+
+    public function search(Request $request)
+{
+    $query = $request->input('search');
+
+    // Sanitize the search query
+    $query = trim($query);
+    $query = str_replace(' ', '%', $query);
+
+
+    $items = Item::where('title', 'like', '%' . $query . '%')->get();
+
+
+    if ($items->isEmpty()) {
+        return redirect()->back()->with('message', 'No results found for your search: ' . $query);
+    }
+
+    return view('user.search', ['items' => $items]);
+}
 }

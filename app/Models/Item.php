@@ -9,11 +9,11 @@ class Item extends Model
 {
     use HasFactory;
     protected $table = 'items';
-    protected $fillable = ['product_name', 'price', 'sold', 'rating', 'category'];
+    protected $fillable = ['title', 'price', 'body', 'category_id', 'totalSold', 'rating'];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
-    
+
 }
