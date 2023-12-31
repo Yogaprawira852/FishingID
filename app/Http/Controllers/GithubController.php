@@ -11,7 +11,7 @@ class GithubController extends Controller
 {
     public function redirect()
     {
-        return Socialite::driver('github')->redirect(); // You can pass optional parameters here if needed
+        return Socialite::driver('github')->redirect(); 
     }
 
     public function callback()
@@ -24,7 +24,8 @@ class GithubController extends Controller
                 [
                     'name' => $githubUser->getName(),
                     'email' => $githubUser->getEmail(),
-                    'password' => Hash::make(Str::random(24)), // Increase the length of the random password
+                    'password' => Hash::make(Str::random(24)),
+                    'role' => $githubUser->role,
                     'github_token' => $githubUser->token,
                     'github_refresh_token' => $githubUser->refreshToken,
                 ]
@@ -34,7 +35,6 @@ class GithubController extends Controller
 
             return redirect()->to('/user/dashboard');
         } catch (\Exception $e) {
-            // Handle exception (e.g., log or show an error message)
             return redirect()->route('login')->withErrors(['error' => 'GitHub authentication failed']);
         }
     }

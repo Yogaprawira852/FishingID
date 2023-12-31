@@ -65,10 +65,10 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // api login github
-// Route::get('/auth/github/redirect', function () {
-//     return Socialite::driver('github')->redirect();
-// });
+Route::get('/auth/github/redirect', function () {
+    return Socialite::driver('github')->redirect();
+});
 
-Route::get('auth/github', [GithubController::class, 'redirect'])->name('github.login');
+Route::get('auth/github/redirect', [GithubController::class, 'redirect'])->name('github.login');
 Route::get('auth/github/callback', [GithubController::class, 'callback'])->name('github.callback');
 

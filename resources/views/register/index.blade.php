@@ -62,6 +62,7 @@
                             <button
                                 class="w-full bg-orange-400 text-white p-2 my-5 rounded-lg mb-6 hover:bg-orange-300  hover:border hover:border-gray-300"
                                 type="submit">Register</button>
+                                <a href="/auth/github/redirect" class="w-full bg-black text-white p-2 my-1 rounded-md mb-6 hover:bg-blue-900 hover:border hover:border-gray-300 flex items-center justify-center">Login with Github</a>                       
                         </form>
                         <small class="d-block text-center mt-3 mx-2">already have an account?<a class="mx-2 font-semibold"
                                 href="/login">Login Now!</a></small>
