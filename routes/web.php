@@ -11,6 +11,7 @@ use App\Http\Controllers\userController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\GithubController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -64,25 +65,10 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // api login github
-Route::get('/auth/github/redirect', function () {
-    return Socialite::driver('github')->redirect();
-});
+// Route::get('/auth/github/redirect', function () {
+//     return Socialite::driver('github')->redirect();
+// });
 
-Route::get('/auth/callback', function () {
-    $githubUser = Socialite::driver('github')->user();
+Route::get('auth/github', [GithubController::class, 'redirect'])->name('github.login');
+Route::get('auth/github/callback', [GithubController::class, 'callback'])->name('github.callback');
 
-    $user = User::updateOrCreate ([
-        'github_id' => $githubUser->id,
-    ], [
-        'name' => $githubUser->nickname,
-        'email' => $githubUser->email,
-        'password' => Hash::make('rahasia'),
-        'github_token' => $githubUser->token,
-        'github_refresh_token' => $githubUser->refreshToken,
-
-    ]);
-
-    Auth::login($user);
-
-    return redirect('/admin/dashboard');
-});
