@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 
 @section('container')
-    <div class="mx-8 my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class=" ml-80 mt-20 mx-8 my-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="md:col-span-1 md:mx-end">
             <h1 class="text-2xl font-semibold text-gray-800 mb-4">Create New Item</h1>
 
